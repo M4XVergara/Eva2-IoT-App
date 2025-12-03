@@ -4,6 +4,7 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.example.eva2.presentation.crud.CrudScreen // <--- IMPORTANTE: Debe importar el archivo real
 import com.example.eva2.presentation.developer.DeveloperScreen
 import com.example.eva2.presentation.home.HomeScreen
 import com.example.eva2.presentation.login.LoginScreen
@@ -75,16 +76,14 @@ fun AppNavigation() {
             )
         }
 
-        // 7. CRUD Usuarios (Pendiente o ya implementado)
+        // 7. CRUD Usuarios (CONECTADO)
         composable(AppScreens.CrudUsers.route) {
-            // Si ya tienes CrudScreen, úsala. Si no, usa este placeholder:
-            CrudScreen(onBackClick = { navController.popBackStack() })
+            CrudScreen(
+                onBackClick = {
+                    navController.popBackStack()
+                }
+            )
         }
 
-    } // <--- Cierra el NavHost
-} // <--- ¡ESTA ES LA LLAVE QUE TE FALTABA! (Cierra la función AppNavigation)avController
-
-@Composable
-fun CrudScreen(onBackClick: () -> Boolean) {
-    TODO("Not yet implemented")
-}
+    } // Fin del NavHost
+} // Fin de AppNavigation

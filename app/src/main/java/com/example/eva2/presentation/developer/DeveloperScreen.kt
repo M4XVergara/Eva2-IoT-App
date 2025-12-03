@@ -69,7 +69,7 @@ fun DeveloperScreen(onBackClick: () -> Unit) {
 
             // DATOS DEL ALUMNO
             Text(
-                text = "Tu Nombre Completo", // <--- CAMBIA ESTO
+                text = "Maximiliano Vergara", //
                 style = MaterialTheme.typography.headlineSmall,
                 fontWeight = FontWeight.Bold
             )
